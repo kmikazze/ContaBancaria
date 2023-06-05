@@ -1,12 +1,36 @@
 package conta;
 
 import java.util.Scanner;
-
+import conta.model.Conta;
+import conta.model.ContaCorrente;
+import conta.model.ContaPoupanca;
 import conta.util.Colors;
 
 public class Menu {
 
 	public static void main(String[] args) {
+		
+		Conta c1 = new Conta(1,123,1,"Adriana",1000.0f);
+		c1.visualizar();
+		c1.sacar(1200.0f);
+		c1.visualizar();
+		c1.depositar(5000.0f);
+		c1.visualizar();
+		
+		ContaCorrente cc1 = new ContaCorrente(2,123,1,"Mariana",1700.0f,1000.0f);
+		cc1.visualizar();
+		cc1.sacar(1800.0f);
+		cc1.visualizar();
+		cc1.depositar(5000.0f);
+		cc1.visualizar();
+		
+		ContaPoupanca cp1 = new ContaPoupanca(3,123,2,"Victor",1100.0f,15);
+		cp1.visualizar();
+		cp1.sacar(1000.0f);
+		cp1.visualizar();
+		cp1.depositar(5000.0f);
+		cp1.visualizar();
+		
 		Scanner leia = new Scanner(System.in);
 
 		int opcao;
@@ -14,7 +38,7 @@ public class Menu {
 		while (true) {
 			
 			System.out.println(Colors.TEXT_YELLOW_BOLD);
-			System.out.println("\t |========================================|");
+			System.out.println("\t  ======================================== ");
 			System.out.println("\t |                                        |");
 			System.out.println("\t |            BANCO KMIKAZZE              |");
 			System.out.println("\t |                                        |");
@@ -30,10 +54,10 @@ public class Menu {
 			System.out.println("\t |   8 - Transferir valores entre Contas  |");
 			System.out.println("\t |   9 - Sair                             |");
 			System.out.println("\t |                                        |");
-			System.out.println("\t |========================================|");
+			System.out.println("\t  ======================================== ");
 			
 			System.out.println(Colors.TEXT_YELLOW_BOLD_BRIGHT);
-			System.out.print("\nEntre com a opção desejada: ");
+			System.out.print("\nEntre com a opção desejada: "+Colors.TEXT_RESET);
 			opcao = leia.nextInt();
 
 			if (opcao == 9) {
@@ -76,7 +100,6 @@ public class Menu {
 
 					break;
 				default:
-					System.out.println(Colors.TEXT_RED);
 					System.out.println("\nOpção Inválida!\n");
 					break;
 			}
