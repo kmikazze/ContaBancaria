@@ -2,7 +2,7 @@ package conta.model;
 
 import conta.util.Colors;
 
-public class Conta {
+public abstract class Conta {
 	private int numero;
 	private int agencia;
 	private int tipo;
