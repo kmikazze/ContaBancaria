@@ -78,7 +78,7 @@ public abstract class Conta {
 			tipo = "Conta Poupança";
 			break;
 		}
-		System.out.println(Colors.TEXT_YELLOW_BOLD_BRIGHT);
+		System.out.println(Colors.TEXT_BLACK_BOLD_BRIGHT);
 		System.out.println("\t  ====================================== ");
 		System.out.println("\t |            Dados da conta:           |");
 		System.out.println("\t |======================================|");
@@ -87,6 +87,6 @@ public abstract class Conta {
 		System.out.println("\t |Tipo da conta: "+tipo+"\t\t|");
 		System.out.println("\t |Titular: "+this.titular+"\t\t\t|");
 		System.out.println("\t |Saldo: "+this.saldo+"\t\t\t        |");
-		System.out.println("\t  ===================================== ");
+		System.out.println("\t  ====================================== ");
 	}
 }
